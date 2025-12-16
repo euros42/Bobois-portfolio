@@ -17,6 +17,9 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
     />
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Kalnia:wght@100..700&display=swap');
+    </style>
 
 </head>
 
@@ -24,14 +27,14 @@
     <!-- MAIN -->
     <main>
         <!-- HEADER -->
-        <header>
+        <header class="margin-left">
             <!-- GAUCHE HEADER -->
             <span>
-                <img src="bobois-menuisier.png">
+                <img src="bobois-menuisier.png" width="70px">
             </span>
             <!-- DROITE HEADER -->
             <nav>
-                <ul>
+                <ul class="flex gap-20 margin-right">
                     <li>
                         <p>Nos réalisations</p>
                     </li>
@@ -49,11 +52,11 @@
 
         </header>
         <!-- SECTION HERO -->
-        <section class="img-texture">
+        <section class="flex img-texture bg">
 
-            <div>
-                <img src="bobois-menuisier.png">
-                <h2>${propositionDeValeur}</h2>
+            <div class="align-center place">
+                <img src="bobois-menuisier.png" class="align-center bg-blanc" width="30%">
+                <h1>Des créations sur mesure pour sublimer votre intérieur</h1>
             </div>
         </section>
         <!-- FIN SECTION HERO -->
@@ -61,36 +64,36 @@
         <section class="fond-marron-clair">
             <h2>Nos réalisations</h2>
 
-            <div> <!-- DIV PARENT PREMIER GROS CADRE -->
+            <div class="space-evenly"> <!-- DIV PARENT PREMIER GROS CADRE -->
 
-                <div> <!-- DEUX CADRES A GAUCHE -->
+                <div class="flex space-evenly"> <!-- DEUX CADRES A GAUCHE -->
 
-                    <div><!-- UN CADRE A GAUCHE EN HAUT -->
+                    <div class="w33 cadre-real flex"><!-- UN CADRE A GAUCHE EN HAUT -->
 
-                        <img src="">
-                        <h4></h4>
-                        <p></p>
+                        <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/menuiserie/table-bois-massif.webp" width="33%">
+                        <h4>titre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nihil laudantium, aut, sequi laboriosam dignissimos consequuntur odit repellat impedit ut, at minima voluptatibus nobis maxime a reprehenderit velit possimus amet.</p>
                     </div>
-                    <div><!-- UN CADRE A GAUCHE EN BAS -->
+                    <div class="w33 cadre-real flex"><!-- UN CADRE A GAUCHE EN BAS -->
 
-                        <img src="">
-                        <h4></h4>
-                        <p></p>
+                        <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/menuiserie/porte-entree-sculptee.webp" width="33%" >
+                        <h4>titre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolorem iste voluptatum doloremque fugit sint cumque labore nulla recusandae fuga. Dignissimos assumenda temporibus excepturi a aperiam consequuntur saepe reprehenderit sunt.</p>
 
                     </div>
 
                 </div>
                 <!-- DEUX CADRES A DROITE -->
-                <div>
-                    <div><!-- CADRE A DROITE EN HAUT -->
-                        <img src="">
-                        <h4></h4>
-                        <p></p>
+                <div class="flex space-evenly">
+                    <div class="w33 cadre-real flex"><!-- CADRE A DROITE EN HAUT -->
+                        <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/menuiserie/armoire-bois-exotique.webp"width=33%>
+                        <h4>Titre</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptatibus consequuntur maiores aspernatur quae, modi commodi tempora impedit rem rerum? Reiciendis quas neque sapiente iste architecto vitae rem illum enim.</p>
                     </div>
-                    <div><!-- CADRE A DROITE EN BAS -->
-                        <img src="">
-                        <h4></h4>
-                        <p></p>
+                    <div class="w33 cadre-real flex"><!-- CADRE A DROITE EN BAS -->
+                        <img src="https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/images/menuiserie/escalier-sur-mesure.webp"width=33%>
+                        <h4>titre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae neque assumenda, dolor enim officiis odio veritatis pariatur debitis distinctio modi, similique veniam laudantium quibusdam, quasi rem illo. Et, necessitatibus repudiandae.</p>
                     </div>
                 </div>
 
@@ -106,19 +109,20 @@
             <h2>Nos valeurs</h2>
 
             <!-- DIV REGROUPE LES TROIS CADRES -->
-            <div>
+            <div class="space-evenly flex align-center">
                 <!-- VALEUR 1 -->
-                <div><i></i>
-                    <p>Valeur 1 </p>
+                <div class="cadre-val"><i class="ph-fill ph-pen-nib-straight"></i>
+                    <p> Des créations personnalisées pour s'adapter parfaitement à votre espace </p>
                 </div>
                 <!-- VALEUR 2 -->
-                <div>
-                    <i></i>
-                    <p>Valeur 2</p>
+                <div class="cadre-val align-center">
+                    <i class="ph-fill ph-log"></i>
+                    <p>Des matériaux de haute qualité pour une durabilité exceptionnelle</p>
                 </div>
                 <!-- VALEUR 3 -->
-                <div><i></i>
-                    <p>Valeur 3</p>
+                <div class="cadre-val align-center">
+                    <i class="ph-fill ph-pencil-ruler"></i>
+                    <p>Un savoir-faire artisanal pour des finitions impeccables</p>
                 </div>
 
             </div>
@@ -126,39 +130,40 @@
         <!-- FIN SECTION 2 VALEURS -->
 
         <!-- SECTION 3 TEMOIGNAGES CLIENTS-->
-<section class="img-texture"> 
+<section class="img-texture bg"> 
         <h2>Ils ont apprécié notre travail</h2>
-        <div>
+        <div class="flex space-evenly">
 
             <!-- TEMOIGNAGE 1 -->
-            <div>
+            <div class="cadre-tem">
 
                 <div>
                     <h5>Prénom</h5><i class="ph-fill ph-star"></i>
                     <p>Type de prestation</p>
-                </div>
+                </div><p>Note</p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugit mollitia voluptate tempora suscipit rem, dolore aspernatur rerum exercitationem, veritatis voluptatibus quia accusamus ab, illo deleniti repellendus autem! Modi, voluptate?
                 </p>
             </div>
 
                 <!-- TEMOIGNAGE 2 -->
-            <div>
+            <div class="cadre-val">
 
                 <div>
                     <h5>Prénom</h5><i class="ph-fill ph-star"></i><p>Type de prestation</p>
-                </div>
+                </div><p>Note</p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugit mollitia voluptate tempora suscipit rem, dolore aspernatur rerum exercitationem, veritatis voluptatibus quia accusamus ab, illo deleniti repellendus autem! Modi, voluptate?
                 </p>
             </div>
 
                 <!-- TEMOIGNAGE 3 -->
-            <div>
+            <div class="cadre-val">
 
                 <div>
                     <h5>Prénom</h5><i class="ph-fill ph-star"></i><p>Type de prestation</p>
                 </div>
+                <p>Note</p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugit mollitia voluptate tempora suscipit rem, dolore aspernatur rerum exercitationem, veritatis voluptatibus quia accusamus ab, illo deleniti repellendus autem! Modi, voluptate?
                 </p>
@@ -171,18 +176,19 @@
 
         <!-- FIN DU MAIN -->
     </main>
-    <footer class="fond-marron-clair"> <!-- FOOTER -->
-        <div> 
-            <div><img src=""></div>
-            <div><h5>Prets a travailler ensemble ?</h5>
+
+    <footer class="fond-marron-clair flex"> <!-- FOOTER -->
+        <div class="flex"> 
+            <img src="bobois-menuisier.png" width="15%">
+            <div class="w40"><h5>Prets a travailler ensemble ?</h5>
             <p>Une idée, un projet, une envie de collaboration ? Contactez moi, je serai ravie d’en discuter et de voir comment avancer ensemble. Laissez votre adresse de messagerie je vous rapellerai dans les plus brefs délais</p></div>
-            <div><input class="padding-15" type="text" placeholder="Nom">
-                <input class="padding-15" type="email" placeholder="Email">
+            <div class=""><input class="padding-20" type="text" placeholder="Nom">
+                <input class="padding-20" type="email" placeholder="Email">
                 <input class="btn w-48 txt-white" type="button" value="ENVOYER">
             </div>
 
         </div>
-<p>Mentions legales @2025 - Bobois- Menuisier</p>
+<p class="align-center margin-top-100 gap-20">Mentions legales @2025 - Bobois- Menuisier</p>
     </footer>
 </body>
 
