@@ -24,6 +24,21 @@ h2,h4{
      font-weight: 500;
 }
 
+h2{
+    font-size: 36px;
+}
+
+.place{margin:0px 50px 50px 300px;
+    padding: 10% 0;}
+    
+/*BOUTON*/
+
+.btn{
+    background-color: rgba(86, 39, 9, 1);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+}
 /*Classes fonctionnelles flex*/
 .align-center{
     align-items: center;
@@ -86,7 +101,20 @@ justify-content:center;}
 .w10 {
     width: 10%;
 }
+/*TAILLE ECRITURE*/
 
+.seize{
+    font-size: 16px;
+}
+
+.petit-titre{
+    font-size: 25px;
+}
+
+.icone{
+    font-size:40px;
+    color:rgba(86, 39, 9, 1);
+}
 /*Couleurs*/
 
 .fond-marron-clair{
@@ -96,11 +124,18 @@ justify-content:center;}
 
 .fond-marron{
     background-color: rgba(86, 39, 9, 1);
+    color: #C9B49F;
+    text-align: center;
 }
 
 .img-texture{
     background-image: url(téléchargé\ \(15\).jpg);
 }
+
+.titre-marron{
+    color: rgba(86, 39, 9, 1);
+}
+
 
 /*PADDING ET MARGIN*/
 
@@ -122,6 +157,10 @@ justify-content:center;}
 
 .padding-top-60{
 padding-top: 60px;
+}
+
+.padding-top-100{
+    padding-top: 100px;
 }
 
 .padding-top-20{
@@ -147,6 +186,9 @@ padding-top: 60px;
     gap: 20px;
 }
 
+.gap-50{
+    gap:50px
+}
 .padding{
     padding: 40px;
 }
@@ -179,30 +221,35 @@ background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 }
+
 .bg-blanc{
     background-color: #ffffff;
 }
-.place{margin:0px 50px 50px 300px;
-    padding: 10% 0;}
+
 
 /*SECTION 1*/
+.text-align{
+    text-align: center;
+}
 
 .cadre-real{
     color: black;
     background-color: white;
-    width: 33%;
+    width: 45%;
 }
+
 
 /*SECTION 2 VALEURS*/
 
 .cadre-val{
     color: black;
     background-color: white;
-    width: 20%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-size: 12px;
+    width: 30%;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    font-size: 14px;
     font-family: "Jaldi", sans-serif;
+    height: 100px;
 }
 
 
@@ -211,13 +258,13 @@ background-repeat: no-repeat;
 .cadre-tem{
     color: black;
     background: #ffffff;
-    width:28%;
+    width:20%;
+}
+
+.gras{
+    font-weight: bold;
 }
 
 /*FOOTER*/
 
-.btn{
-    background-color: rgba(86, 39, 9, 1);
-    color: white;
-    padding: 5px 15px;
-}
+

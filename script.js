@@ -2,132 +2,111 @@ fetch("menuiserie.json")
     .then(rep => rep.json())
     .then(menuiserie => {
         console.log(menuiserie)
-        afficher(menuiserie)
+        //      afficher(menuiserie)
+        afficherHero(menuiserie)
         afficherRealisations(menuiserie)
-
+        afficherValeurs(menuiserie)
+        afficherTemoignages(menuiserie)
     })
 
-function afficherRealisations(menuiserie){
-    let realisations =[""]
-    menuiserie.realisations.forEach(realisation => {realisations+=`<img src="${realisation.imageUrl} width="33%">
-                        <h4>${realisation.titre}</h4>
-                        <p>${realisation.decription}</p>`
 
-            
-        });
-}
+// hero
+//role: afficher le hero (h1 + btn)
+//parametre : donnée (menuiserie.json)
+//return : rien
 
-function afficherTemoignages(menuiserie){
-    let temoignages=[""]
-    menuiserie.temoignages.forEach(temoignage => {temoignages+=`<div>
-                    <h5>${temoignage.prenom}</h5><i class="ph-fill ph-star"></i><p>${temoignage.typePrestation}</p>
-                </div>
-                <p>${temoignage.note}</p>
-                <p>
-                    ${temoignage.commentaire}
-                </p>`
+function afficherHero(donee) {
 
-            
-        });
-}
-
-
-function afficher(menuiserie){
-        
-        
-
-        //ici faut faire des for each pour valeurs, réalisations et temoignages
-
-        
-        
-        
-
-//SECTION HERO
-        document.getElementById("sectionhero").innerHTML += `<div class="align-center place">
+    document.getElementById("sectionhero").innerHTML +=
+        `<div class="align-center place">
                 <img src="bobois-menuisier.png" class="align-center bg-blanc" width="30%">
-                <h1>${menuiserie.propositionDeValeur}</h1>
-            </div>`
+                <h1>${donee.propositionDeValeur}</h1>
+                <a class="btn">${donee.texteBouton}</a>
+                <p>${donee.entreprise}</p>
+        </div>
+    `
+}
 
-//SECTION 1 (il reste à ajouter les for each)
 
-        document.getElementById("section1").innerHTML+=`
-        
-        <h2>Nos réalisations</h2>
 
-            <div class="space-evenly"> <!-- DIV PARENT PREMIER GROS CADRE -->
 
-                <div class="flex space-evenly"> <!-- DEUX CADRES A GAUCHE -->
+// realisations
 
-                    <div class="w33 cadre-real flex"><!-- UN CADRE A GAUCHE EN HAUT -->
-<!--Faire boucle for Each pour les cadres comme ça -->
-                        ${realisations[0]}
-                    </div>
-                    <div class="w33 cadre-real flex"><!-- UN CADRE A GAUCHE EN BAS -->
-                    ${realisations[1]}
+//afficher les réalisations
+//paramètre : donnée(menuiserie.json)
+//return : rien
 
-                    </div>
 
+
+function afficherRealisations(donnee) {
+    donnee.realisations.forEach(realisation => {
+        document.getElementById("section1").innerHTML += `
+            <div class="flex cadre-real"data-aos="zoom-in-up">
+                <img src="${realisation.imageUrl}" class="w30">
+                <div class="w20">
+                    <h4 class="petit-titre">${realisation.titre}</h4>
+                    <p class="seize">${realisation.description}</p>
                 </div>
-                <!-- DEUX CADRES A DROITE -->
-                <div class="flex space-evenly">
-                    <div class="w33 cadre-real flex"><!-- CADRE A DROITE EN HAUT -->
-                        ${realisations[2]}
-                    </div>
-                    <div class="w33 cadre-real flex"><!-- CADRE A DROITE EN BAS -->
-                        ${realisations[3]}
-                    </div>
-                </div>
+            </div>
+        `
+    });
 
 
-            </div>`
+}
 
-//SECTION 2 VALEURS (je crois ya un problème pour les icônes faudrait les rajouter dans le json, c'est un détail de fin de code mais avant le CSS)
 
-        document.getElementById("section2").innerHTML+=`
+// valeurs
+//afficher les valeurs
+//paramètre : donnée(menuiserie.json)
+//return : rien
+
+function afficherValeurs(donnee) {
+    document.getElementById("section2").innerHTML += `
          <!-- TITRE -->
             <h2>Nos valeurs</h2>
 
             <!-- DIV REGROUPE LES TROIS CADRES -->
             <div class="space-evenly flex align-center">
                 <!-- VALEUR 1 -->
-                <div class="cadre-val"><i class="ph-fill ph-pen-nib-straight"></i>
-                    <p>
-                    ${menuiserie.promessesClients[0]} </p>
+                <div class="cadre-val align-center" data-aos="flip-left">
+                    <i class="ph-fill ph-pen-nib-straight icone icone"></i>
+                    <p class="seize">${donnee.promessesClients[0]}</p>
                 </div>
                 <!-- VALEUR 2 -->
-                <div class="cadre-val align-center">
-                    <i class="ph-fill ph-log"></i>
-                    <p>${menuiserie.promessesClients[1]}</p>
+                <div class="cadre-val align-center"data-aos="flip-left">
+                    <i class="ph-fill ph-log icone"></i>
+                    <p class="seize">${donnee.promessesClients[1]}</p>
                 </div>
                 <!-- VALEUR 3 -->
-                <div class="cadre-val align-center">
-                    <i class="ph-fill ph-pencil-ruler"></i>
-                    <p>${menuiserie.promessesClients[2]}</p>
+                <div class="cadre-val align-center"data-aos="flip-left">
+                    <i class="ph-fill ph-pencil-ruler icone"></i>
+                    <p class="seize">${donnee.promessesClients[2]}</p>
                 </div>
 
             </div>`
+}
 
-            //SECTION 3 TEMOIGNAGES (il reste les forEach pour chaque temoignages : prenom, type de prestation, note, description)
 
-        document.getElementById("section3").innerHTML+=`
-        <h2>Ils ont apprécié notre travail</h2>
-        <div class="flex space-evenly">
+//commentaires
+//fonction: Afficher les temoignages
+//paramètre:donnee(menuiserie.json)
+//retour:rien
 
-            <!-- TEMOIGNAGE 1 -->
-            <div class="cadre-tem">
-
-                ${temoignages[0]}
+function afficherTemoignages(donee) {
+    donee.temoignages.forEach(temoignage => {
+        document.getElementById("section3").innerHTML += `
+        <div class="cadre-tem" data-aos="fade-up">
+            <div class="w30 space-between flex">
+                <h5 class="petit-titre">${temoignage.prenom}</h5> 
+                <p class=seize>${temoignage.note}<i class="ph-fill ph-star"></i></p>
             </div>
 
-                <!-- TEMOIGNAGE 2 -->
-            <div class="cadre-tem">
+            <div class="">
+           <p class="gras seize">${temoignage.typePrestation}<p>
+            <p class="seize space-between">${temoignage.commentaire}</p>
+            </div>
+        </div>`})
+};
 
-                ${temoignages[1]}
 
-                <!-- TEMOIGNAGE 3 -->
-            <div class="cadre-tem">
 
-                ${temoignages[2]}
-
-        </div>`
-}
