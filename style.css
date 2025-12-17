@@ -30,7 +30,7 @@ h2{
 
 .place{margin:0px 50px 50px 300px;
     padding: 10% 0;}
-    
+
 /*BOUTON*/
 
 .btn{
@@ -182,6 +182,9 @@ padding-top: 60px;
 .margin-right{
     margin-right: 50px;
 }
+.margin-right-200{
+    margin-right: 200px;
+}
 .gap-20{
     gap: 20px;
 }
@@ -259,6 +262,7 @@ background-repeat: no-repeat;
     color: black;
     background: #ffffff;
     width:20%;
+    height:35%;
 }
 
 .gras{
@@ -266,5 +270,7 @@ background-repeat: no-repeat;
 }
 
 /*FOOTER*/
-
+.colonne{
+    flex-direction: column;
+}
 

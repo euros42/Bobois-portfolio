@@ -101,9 +101,9 @@ function afficherTemoignages(donee) {
                 <p class=seize>${temoignage.note}<i class="ph-fill ph-star"></i></p>
             </div>
 
-            <div class="">
+            <div class="space-between">
            <p class="gras seize">${temoignage.typePrestation}<p>
-            <p class="seize space-between">${temoignage.commentaire}</p>
+            <p class="seize">${temoignage.commentaire}</p>
             </div>
         </div>`})
 };
